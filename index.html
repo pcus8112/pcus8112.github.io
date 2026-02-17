@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Maison Singé Éditions</title>
-<meta name="description" content="Independent publishing for literature, essays and contemporary thought.">
 
 <style>
 body {
@@ -64,32 +62,30 @@ p {
     color: #000;
 }
 
-/* Sprachumschalter */
-.lang-switch {
-    position: fixed;
-    top: 15px;
-    left: 15px;
+#lang-switch {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     font-size: 14px;
-    color: #aaa;
 }
 
-.lang-switch span {
+#lang-switch span {
     cursor: pointer;
-    margin-right: 8px;
+    opacity: 0.7;
 }
 
-.lang-switch span:hover {
-    color: #fff;
+#lang-switch span:hover {
+    opacity: 1;
 }
 </style>
 </head>
 
 <body>
 
-<div class="lang-switch">
-  <span onclick="setLang('en')">🇺🇸</span>
-  <span onclick="setLang('fr')">🇫🇷</span>
-  <span onclick="setLang('de')">🇩🇪</span>
+<div id="lang-switch">
+  <span onclick="setLang('en')">🇺🇸 English</span> |
+  <span onclick="setLang('fr')">🇫🇷 Français</span> |
+  <span onclick="setLang('de')">🇩🇪 Deutsch</span>
 </div>
 
 <div class="container">
@@ -121,15 +117,14 @@ const texts = {
   }
 };
 
-function applyLang(lang) {
-  if (!texts[lang]) lang = "en";
-  document.getElementById("tagline").innerText = texts[lang].tagline;
-  document.getElementById("orderBtn").innerText = texts[lang].button;
-}
-
 function setLang(lang) {
   localStorage.setItem("lang", lang);
   applyLang(lang);
+}
+
+function applyLang(lang) {
+  document.getElementById("tagline").innerText = texts[lang].tagline;
+  document.getElementById("orderBtn").innerText = texts[lang].button;
 }
 
 function detectLang() {
@@ -139,10 +134,8 @@ function detectLang() {
   return "en";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang");
-  applyLang(savedLang || detectLang());
-});
+let savedLang = localStorage.getItem("lang");
+applyLang(savedLang || detectLang());
 </script>
 
 </body>
