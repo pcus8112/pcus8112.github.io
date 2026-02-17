@@ -17,7 +17,11 @@ body {
     height: 100vh;
     text-align: center;
 }
-
+<div id="lang-switch">
+  <span onclick="setLang('en')">🇺🇸 English</span> |
+  <span onclick="setLang('fr')">🇫🇷 Français</span> |
+  <span onclick="setLang('de')">🇩🇪 Deutsch</span>
+</div>
 .container {
     max-width: 600px;
     padding: 20px;
@@ -73,13 +77,48 @@ p {
 <h1>MAISON SINGÉ</h1>
 <h2>ÉDITIONS</h2>
 
-<p>
-Independent publishing for literature, essays and contemporary thought.
-</p>
+<p id="tagline"></p>
 
-<a href="#" class="button">Beim Verlagspartner bestellen</a>
+<a href="#" class="button" id="orderBtn"></a>
 
 </div>
+<script>
+const texts = {
+  en: {
+    tagline: "Independent publishing for literature, essays and contemporary thought.",
+    button: "Order from our publishing partner"
+  },
+  de: {
+    tagline: "Unabhängiger Verlag für Literatur, Essays und Gegenwartsdenken.",
+    button: "Beim Verlagspartner bestellen"
+  },
+  fr: {
+    tagline: "Édition indépendante de littérature, essais et pensée contemporaine.",
+    button: "Commander chez notre partenaire éditorial"
+  }
+};
 
+function setLang(lang) {
+  localStorage.setItem("lang", lang);
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  document.getElementById("tagline").innerText = texts[lang].tagline;
+  document.getElementById("orderBtn").innerText = texts[lang].button;
+}
+
+// automatische Domain-Erkennung
+function detectLang() {
+  const host = window.location.hostname;
+
+  if (host.endsWith(".de")) return "de";
+  if (host.endsWith(".fr")) return "fr";
+  return "en";
+}
+
+let savedLang = localStorage.getItem("lang");
+applyLang(savedLang || detectLang());
+</script>
 </body>
 </html>
