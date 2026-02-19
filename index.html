@@ -12,17 +12,17 @@ body {
     color: #fff;
     font-family: Georgia, "Times New Roman", serif;
     text-align: center;
-    padding: 50px 20px 40px;
+    padding: 60px 20px;
 }
 
 .container {
-    max-width: 720px;
+    max-width: 640px;
     margin: auto;
 }
 
 .logo {
-    width: 200px;
-    margin-bottom: 25px;
+    width: 220px;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -35,20 +35,18 @@ h2 {
     font-weight: normal;
     letter-spacing: 3px;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 p {
-    color: #cfcfcf;
-    line-height: 1.7;
-    margin: 0 auto;
-    max-width: 560px;
+    color: #ccc;
+    line-height: 1.6;
 }
 
 .button {
     display: inline-block;
-    margin-top: 22px;
-    padding: 11px 24px;
+    margin-top: 25px;
+    padding: 12px 26px;
     border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
@@ -62,12 +60,22 @@ p {
 }
 
 .section {
-    margin-top: 55px;
+    margin-top: 70px;
 }
 
 .section h3 {
     letter-spacing: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.about-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.about-link:hover {
+    color: #c6a15b;
 }
 
 #lang-switch {
@@ -79,7 +87,7 @@ p {
 
 #lang-switch span {
     cursor: pointer;
-    opacity: 0.75;
+    opacity: 0.7;
 }
 
 #lang-switch span:hover {
@@ -87,15 +95,14 @@ p {
 }
 
 footer {
-    margin-top: 60px;
-    opacity: 0.55;
+    margin-top: 70px;
+    opacity: 0.6;
     font-size: 14px;
 }
 
 footer a {
     color: #c6a15b;
     text-decoration: none;
-    margin: 0 8px;
 }
 </style>
 </head>
@@ -125,10 +132,11 @@ footer a {
   <p id="productsText"></p>
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT LINK -->
 <div class="section">
-  <h3 id="aboutTitle"></h3>
-  <p id="aboutText"></p>
+  <h3>
+    <a href="about.html" class="about-link" id="aboutTitle"></a>
+  </h3>
 </div>
 
 <footer>
@@ -146,7 +154,6 @@ const texts = {
     productsTitle: "Publications",
     productsText: "Our first titles will be released soon.",
     aboutTitle: "About us",
-    aboutText: "Maison Singé Éditions is the publishing house of Maison Singé, a transparent luxury initiative. Through literature, historical reflection and philosophical thought, the publishing program extends the ethical and cultural vision of the Maison.",
     imprint: "Legal Notice",
     privacy: "Privacy Policy"
   },
@@ -156,7 +163,6 @@ const texts = {
     productsTitle: "Veröffentlichungen",
     productsText: "Unsere ersten Titel erscheinen in Kürze.",
     aboutTitle: "Wer wir sind",
-    aboutText: "Maison Singé Éditions ist der Buchverlag von Maison Singé, einer transparenten Luxusinitiative. Durch Literatur, historische Reflexion und philosophisches Denken erweitert das Verlagsprogramm die ethische und kulturelle Vision der Maison.",
     imprint: "Impressum",
     privacy: "Datenschutz"
   },
@@ -165,8 +171,7 @@ const texts = {
     button: "Commander chez notre partenaire éditorial",
     productsTitle: "Publications",
     productsText: "Nos premiers titres paraîtront prochainement.",
-    aboutTitle: "À propos",
-    aboutText: "Maison Singé Éditions est la maison d’édition de Maison Singé, une initiative de luxe transparente. Par la littérature, la réflexion historique et la pensée philosophique, le programme éditorial prolonge la vision éthique et culturelle de la Maison.",
+    aboutTitle: "Qui sommes-nous",
     imprint: "Mentions légales",
     privacy: "Protection des données"
   }
@@ -183,7 +188,6 @@ function applyLang(lang) {
   document.getElementById("productsTitle").innerText = texts[lang].productsTitle;
   document.getElementById("productsText").innerText = texts[lang].productsText;
   document.getElementById("aboutTitle").innerText = texts[lang].aboutTitle;
-  document.getElementById("aboutText").innerText = texts[lang].aboutText;
   document.getElementById("imprintLink").innerText = texts[lang].imprint;
   document.getElementById("privacyLink").innerText = texts[lang].privacy;
 }
