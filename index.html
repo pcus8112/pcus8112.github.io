@@ -11,16 +11,13 @@ body {
     background: #000;
     color: #fff;
     font-family: Georgia, "Times New Roman", serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     text-align: center;
+    padding: 60px 20px;
 }
 
 .container {
-    max-width: 600px;
-    padding: 20px;
+    max-width: 640px;
+    margin: auto;
 }
 
 .logo {
@@ -29,7 +26,7 @@ body {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 34px;
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
@@ -38,7 +35,7 @@ h2 {
     font-weight: normal;
     letter-spacing: 3px;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 p {
@@ -62,85 +59,21 @@ p {
     color: #000;
 }
 
+.section {
+    margin-top: 70px;
+}
+
+.section h3 {
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
 #lang-switch {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 18px;
+    left: 18px;
     font-size: 14px;
 }
 
 #lang-switch span {
     cursor: pointer;
-    opacity: 0.7;
-}
-
-#lang-switch span:hover {
-    opacity: 1;
-}
-</style>
-</head>
-
-<body>
-
-<div id="lang-switch">
-  <span onclick="setLang('en')">🇺🇸 English</span> |
-  <span onclick="setLang('fr')">🇫🇷 Français</span> |
-  <span onclick="setLang('de')">🇩🇪 Deutsch</span>
-</div>
-
-<div class="container">
-
-<img src="logo.jpg" class="logo">
-
-<h1>MAISON SINGÉ</h1>
-<h2>ÉDITIONS</h2>
-
-<p id="tagline"></p>
-
-<a href="#" class="button" id="orderBtn"></a>
-
-</div>
-
-<script>
-const texts = {
-  en: {
-    tagline: "Independent publishing for literature, essays and contemporary thought.",
-    button: "Order from our publishing partner"
-  },
-  de: {
-    tagline: "Unabhängiger Verlag für Literatur, Essays und Gegenwartsdenken.",
-    button: "Beim Verlagspartner bestellen"
-  },
-  fr: {
-    tagline: "Édition indépendante de littérature, essais et pensée contemporaine.",
-    button: "Commander chez notre partenaire éditorial"
-  }
-};
-
-function setLang(lang) {
-  localStorage.setItem("lang", lang);
-  applyLang(lang);
-}
-
-function applyLang(lang) {
-  document.getElementById("tagline").innerText = texts[lang].tagline;
-  document.getElementById("orderBtn").innerText = texts[lang].button;
-}
-
-function detectLang() {
-  const host = window.location.hostname;
-  if (host.endsWith(".de")) return "de";
-  if (host.endsWith(".fr")) return "fr";
-  return "en";
-}
-
-let savedLang = localStorage.getItem("lang");
-applyLang(savedLang || detectLang());
-</script>
-
-</body>
-</html>
-<footer style="margin-top:60px; text-align:center; opacity:0.6;">
-  <a href="impressum.html">Impressum</a>
-</footer>
-<a href="datenschutz.html">Datenschutz</a>
