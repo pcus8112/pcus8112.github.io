@@ -49,4 +49,155 @@ p {
     display: inline-block;
     margin-top: 22px;
     padding: 11px 24px;
-    border: 1px solid #fff
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.section {
+    margin-top: 55px;
+}
+
+.section h3 {
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+#lang-switch {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    font-size: 14px;
+}
+
+#lang-switch span {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+#lang-switch span:hover {
+    opacity: 1;
+}
+
+footer {
+    margin-top: 60px;
+    opacity: 0.55;
+    font-size: 14px;
+}
+
+footer a {
+    color: #c6a15b;
+    text-decoration: none;
+    margin: 0 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="lang-switch">
+  <span onclick="setLang('en')">🇺🇸 English</span> |
+  <span onclick="setLang('fr')">🇫🇷 Français</span> |
+  <span onclick="setLang('de')">🇩🇪 Deutsch</span>
+</div>
+
+<div class="container">
+
+<img src="logo.jpg" class="logo">
+
+<h1>MAISON SINGÉ</h1>
+<h2>ÉDITIONS</h2>
+
+<p id="tagline"></p>
+
+<a href="#" class="button" id="orderBtn"></a>
+
+<!-- PRODUKTE -->
+<div class="section">
+  <h3 id="productsTitle"></h3>
+  <p id="productsText"></p>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <h3 id="aboutTitle"></h3>
+  <p id="aboutText"></p>
+</div>
+
+<footer>
+  <a id="imprintLink" href="impressum.html"></a> |
+  <a id="privacyLink" href="datenschutz.html"></a>
+</footer>
+
+</div>
+
+<script>
+const texts = {
+  en: {
+    tagline: "Independent publishing for literature, essays and contemporary thought.",
+    button: "Order from our publishing partner",
+    productsTitle: "Publications",
+    productsText: "Our first titles will be released soon.",
+    aboutTitle: "About us",
+    aboutText: "Maison Singé Éditions is the publishing house of Maison Singé, a transparent luxury initiative. Through literature, historical reflection and philosophical thought, the publishing program extends the ethical and cultural vision of the Maison.",
+    imprint: "Legal Notice",
+    privacy: "Privacy Policy"
+  },
+  de: {
+    tagline: "Unabhängiger Verlag für Literatur, Essays und Gegenwartsdenken.",
+    button: "Beim Verlagspartner bestellen",
+    productsTitle: "Veröffentlichungen",
+    productsText: "Unsere ersten Titel erscheinen in Kürze.",
+    aboutTitle: "Wer wir sind",
+    aboutText: "Maison Singé Éditions ist der Buchverlag von Maison Singé, einer transparenten Luxusinitiative. Durch Literatur, historische Reflexion und philosophisches Denken erweitert das Verlagsprogramm die ethische und kulturelle Vision der Maison.",
+    imprint: "Impressum",
+    privacy: "Datenschutz"
+  },
+  fr: {
+    tagline: "Édition indépendante de littérature, essais et pensée contemporaine.",
+    button: "Commander chez notre partenaire éditorial",
+    productsTitle: "Publications",
+    productsText: "Nos premiers titres paraîtront prochainement.",
+    aboutTitle: "À propos",
+    aboutText: "Maison Singé Éditions est la maison d’édition de Maison Singé, une initiative de luxe transparente. Par la littérature, la réflexion historique et la pensée philosophique, le programme éditorial prolonge la vision éthique et culturelle de la Maison.",
+    imprint: "Mentions légales",
+    privacy: "Protection des données"
+  }
+};
+
+function setLang(lang) {
+  localStorage.setItem("lang", lang);
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  document.getElementById("tagline").innerText = texts[lang].tagline;
+  document.getElementById("orderBtn").innerText = texts[lang].button;
+  document.getElementById("productsTitle").innerText = texts[lang].productsTitle;
+  document.getElementById("productsText").innerText = texts[lang].productsText;
+  document.getElementById("aboutTitle").innerText = texts[lang].aboutTitle;
+  document.getElementById("aboutText").innerText = texts[lang].aboutText;
+  document.getElementById("imprintLink").innerText = texts[lang].imprint;
+  document.getElementById("privacyLink").innerText = texts[lang].privacy;
+}
+
+function detectLang() {
+  const host = window.location.hostname;
+  if (host.endsWith(".de")) return "de";
+  if (host.endsWith(".fr")) return "fr";
+  return "en";
+}
+
+let savedLang = localStorage.getItem("lang");
+applyLang(savedLang || detectLang());
+</script>
+
+</body>
+</html>
