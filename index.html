@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -13,17 +12,17 @@ body {
     color: #fff;
     font-family: Georgia, "Times New Roman", serif;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px 40px;
 }
 
 .container {
-    max-width: 640px;
+    max-width: 720px;
     margin: auto;
 }
 
 .logo {
-    width: 220px;
-    margin-bottom: 30px;
+    width: 200px;
+    margin-bottom: 25px;
 }
 
 h1 {
@@ -36,161 +35,18 @@ h2 {
     font-weight: normal;
     letter-spacing: 3px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 p {
-    color: #ccc;
-    line-height: 1.6;
+    color: #cfcfcf;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 560px;
 }
 
 .button {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 26px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #fff;
-    color: #000;
-}
-
-.section {
-    margin-top: 70px;
-}
-
-.section h3 {
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-#lang-switch {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-    font-size: 14px;
-}
-
-#lang-switch span {
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-#lang-switch span:hover {
-    opacity: 1;
-}
-
-footer {
-    margin-top: 70px;
-    opacity: 0.6;
-    font-size: 14px;
-}
-</style>
-</head>
-
-<body>
-
-<div id="lang-switch">
-  <span onclick="setLang('en')">🇺🇸 English</span> |
-  <span onclick="setLang('fr')">🇫🇷 Français</span> |
-  <span onclick="setLang('de')">🇩🇪 Deutsch</span>
-</div>
-
-<div class="container">
-
-<img src="logo.jpg" class="logo">
-
-<h1>MAISON SINGÉ</h1>
-<h2>ÉDITIONS</h2>
-
-<p id="tagline"></p>
-
-<a href="#" class="button" id="orderBtn"></a>
-
-<!-- PRODUKTE -->
-<div class="section">
-  <h3 id="productsTitle"></h3>
-  <p id="productsText"></p>
-</div>
-
-<!-- WER WIR SIND -->
-<div class="section">
-  <h3 id="aboutTitle"></h3>
-  <p id="aboutText"></p>
-</div>
-
-<footer>
-  <a id="imprintLink" href="impressum.html"></a> |
-  <a id="privacyLink" href="datenschutz.html"></a>
-</footer>
-
-</div>
-
-<script>
-const texts = {
-  en: {
-    tagline: "Independent publishing for literature, essays and contemporary thought.",
-    button: "Order from our publishing partner",
-    productsTitle: "Publications",
-    productsText: "Our first titles will be released soon.",
-    aboutTitle: "About us",
-    aboutText: "Maison Singé Éditions is an independent publishing initiative dedicated to literature, essays and contemporary cultural thought.",
-    imprint: "Legal Notice",
-    privacy: "Privacy Policy"
-  },
-  de: {
-    tagline: "Unabhängiger Verlag für Literatur, Essays und Gegenwärtiges Denken.",
-    button: "Beim Verlagspartner bestellen",
-    productsTitle: "Veröffentlichungen",
-    productsText: "Unsere ersten Titel erscheinen in Kürze.",
-    aboutTitle: "Wer wir sind",
-    aboutText: "Maison Singé Éditions ist eine unabhängige verlegerische Initiative für Literatur, Essays und kulturelle Gegenwartsreflexion.",
-    imprint: "Impressum",
-    privacy: "Datenschutz"
-  },
-  fr: {
-    tagline: "Édition indépendante de littérature, essais et pensée contemporaine.",
-    button: "Commander chez notre partenaire éditorial",
-    productsTitle: "Publications",
-    productsText: "Nos premiers titres paraîtront prochainement.",
-    aboutTitle: "Qui sommes-nous",
-    aboutText: "Maison Singé Éditions est une initiative éditoriale indépendante dédiée à la littérature, aux essais et à la pensée contemporaine.",
-    imprint: "Mentions légales",
-    privacy: "Protection des données"
-  }
-};
-
-function setLang(lang) {
-  localStorage.setItem("lang", lang);
-  applyLang(lang);
-}
-
-function applyLang(lang) {
-  document.getElementById("tagline").innerText = texts[lang].tagline;
-  document.getElementById("orderBtn").innerText = texts[lang].button;
-  document.getElementById("productsTitle").innerText = texts[lang].productsTitle;
-  document.getElementById("productsText").innerText = texts[lang].productsText;
-  document.getElementById("aboutTitle").innerText = texts[lang].aboutTitle;
-  document.getElementById("aboutText").innerText = texts[lang].aboutText;
-  document.getElementById("imprintLink").innerText = texts[lang].imprint;
-  document.getElementById("privacyLink").innerText = texts[lang].privacy;
-}
-
-function detectLang() {
-  const host = window.location.hostname;
-  if (host.endsWith(".de")) return "de";
-  if (host.endsWith(".fr")) return "fr";
-  return "en";
-}
-
-let savedLang = localStorage.getItem("lang");
-applyLang(savedLang || detectLang());
-</script>
-
-</body>
-</html>
+    margin-top: 22px;
+    padding: 11px 24px;
+    border: 1px solid #fff
