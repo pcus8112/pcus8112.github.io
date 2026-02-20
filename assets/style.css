@@ -1,1 +1,99 @@
-folgt
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 640px;
+  margin: auto;
+}
+
+.logo {
+  width: 220px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 34px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 26px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.section {
+  margin-top: 70px;
+}
+
+.section h3 {
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.about-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about-link:hover {
+  color: #c6a15b;
+}
+
+#lang-switch {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 14px;
+}
+
+#lang-switch a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+#lang-switch a:hover {
+  opacity: 1;
+}
+
+footer {
+  margin-top: 70px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+footer a {
+  color: #c6a15b;
+  text-decoration: none;
+  }
