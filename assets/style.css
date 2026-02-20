@@ -97,3 +97,19 @@ footer a {
   color: #c6a15b;
   text-decoration: none;
   }
+.back-button{
+  display:inline-block;
+  margin-top:40px;
+  padding:10px 22px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:1px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.back-button:hover{
+  background:#fff;
+  color:#000;
+}
