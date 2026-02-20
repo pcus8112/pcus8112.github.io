@@ -1,1 +1,4 @@
-jjjjk
+User-agent: *
+Allow: /
+
+Sitemap: https://maisonsinger-editions.com/sitemap.xml
