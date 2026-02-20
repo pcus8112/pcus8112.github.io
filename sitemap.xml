@@ -1,1 +1,13 @@
-kvgjk
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://maisonsinger-editions.com/</loc></url>
+  <url><loc>https://maisonsinger-editions.com/de/</loc></url>
+  <url><loc>https://maisonsinger-editions.com/fr/</loc></url>
+
+  <url><loc>https://maisonsinger-editions.com/about.html</loc></url>
+  <url><loc>https://maisonsinger-editions.com/de/about.html</loc></url>
+  <url><loc>https://maisonsinger-editions.com/fr/about.html</loc></url>
+
+  <url><loc>https://maisonsinger-editions.com/impressum.html</loc></url>
+  <url><loc>https://maisonsinger-editions.com/datenschutz.html</loc></url>
+</urlset>
