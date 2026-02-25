@@ -156,7 +156,7 @@ p {
   align-items: center;
   gap: 10px;
 
-  /* ✅ wichtig: sonst wird rechts abgeschnitten */
+  /* wichtig: sonst kann rechts abgeschnitten werden */
   min-width: 0;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -276,7 +276,7 @@ footer a:hover {
 --------------------------- */
 
 @media (max-width: 600px) {
-  /* ✅ mehr Platz, falls Topbar 2-zeilig wird */
+  /* mehr Platz, falls Topbar 2-zeilig wird */
   body {
     padding: 112px 16px 50px;
   }
@@ -305,18 +305,25 @@ footer a:hover {
     gap: 5px;
   }
 
-  /* ✅ FIX: Mobile darf umbrechen, damit "Deutsch" nie abgeschnitten wird */
+  /* ✅ FIX: absolut robust gegen "Deutsch" abgeschnitten
+     Mobile Topbar wird bewusst zweizeilig:
+     1) Back-Link oben
+     2) Sprachen darunter (wrap möglich)
+  */
   .topbar {
-    padding: 12px 12px;
+    padding: 10px 12px;
     gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .toplang {
-    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
     font-size: 13px;
-    justify-content: center;
   }
 
   .toplang .flag {
@@ -327,4 +334,4 @@ footer a:hover {
   .topback {
     font-size: 13px;
   }
-  }
+}
