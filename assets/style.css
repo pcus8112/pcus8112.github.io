@@ -214,6 +214,15 @@ p {
   display: block;
 }
 
+/* TEXT BLOCK BALANCING */
+
+.tagline {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 18px auto 0;
+}
+
 /* ---------------------------
    FOOTER
 --------------------------- */
