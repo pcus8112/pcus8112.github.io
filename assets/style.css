@@ -140,7 +140,7 @@ footer a {
 }
 .hero-img {
     width: 240px;
-    border-radius: 50%;
+    border-radius: 8px;
     margin: 20px 0 10px;
     opacity: 0.95;
 }
