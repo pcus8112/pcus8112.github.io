@@ -15,7 +15,9 @@ body {
 }
 
 .logo {
-  width: 220px;
+  width: 320px;
+  max-width: 78%;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -273,8 +275,9 @@ footer a:hover {
   }
 
   .logo {
-    width: 190px;
-    margin-bottom: 24px;
+  width: 260px;
+  max-width: 86%;
+  margin-bottom: 24px;
   }
 
   h1 {
