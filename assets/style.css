@@ -138,3 +138,9 @@ footer a {
   background: #fff;
   color: #000;
 }
+.hero-img {
+    width: 240px;
+    border-radius: 50%;
+    margin: 20px 0 10px;
+    opacity: 0.95;
+}
