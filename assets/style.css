@@ -96,6 +96,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 #lang-switch a:hover {
@@ -154,6 +155,11 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
+  /* ✅ wichtig: sonst wird rechts abgeschnitten */
+  min-width: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .toplang a {
@@ -270,14 +276,15 @@ footer a:hover {
 --------------------------- */
 
 @media (max-width: 600px) {
+  /* ✅ mehr Platz, falls Topbar 2-zeilig wird */
   body {
-    padding: 98px 16px 50px;
+    padding: 112px 16px 50px;
   }
 
   .logo {
-  width: 260px;
-  max-width: 86%;
-  margin-bottom: 24px;
+    width: 260px;
+    max-width: 86%;
+    margin-bottom: 24px;
   }
 
   h1 {
@@ -298,14 +305,23 @@ footer a:hover {
     gap: 5px;
   }
 
+  /* ✅ FIX: Mobile darf umbrechen, damit "Deutsch" nie abgeschnitten wird */
   .topbar {
     padding: 12px 12px;
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .toplang {
     gap: 8px;
     font-size: 13px;
+    justify-content: center;
+  }
+
+  .toplang .flag {
+    width: 16px;
+    height: 11px;
   }
 
   .topback {
