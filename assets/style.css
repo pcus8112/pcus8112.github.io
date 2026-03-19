@@ -1,66 +1,25 @@
-/* =========================
-   GLOBAL RESET / BASE
-========================= */
-
-html {
-  background-color: #0d0f10; /* FINALER Hintergrund */
-}
-
 body {
   margin: 0;
-  background-color: #0d0f10; /* FINALER Hintergrund */
+  background: #121212; /* Dunkelgrau statt Schwarz */
   color: #fff;
   font-family: Georgia, "Times New Roman", serif;
   text-align: center;
+
+  /* Platz für Top-Navigation */
   padding: 88px 20px 60px;
 }
-
-/* =========================
-   LAYOUT
-========================= */
 
 .container {
   max-width: 640px;
   margin: auto;
 }
 
-/* =========================
-   LOGO / IMAGES
-========================= */
-
 .logo {
   width: 320px;
   max-width: 78%;
   height: auto;
   margin-bottom: 30px;
-  display: block;
 }
-
-.hero-img {
-  width: 240px;
-  max-width: 80%;
-  border-radius: 8px;
-  margin: 20px auto 10px;
-  opacity: 0.95;
-  display: block;
-}
-
-.portrait-wrap {
-  margin-top: 10px;
-}
-
-.portrait {
-  width: 140px;
-  max-width: 60%;
-  border-radius: 50%;
-  margin: 18px auto 0;
-  opacity: 0.95;
-  display: block;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
 
 h1 {
   font-size: 34px;
@@ -80,24 +39,6 @@ p {
   line-height: 1.6;
 }
 
-.tagline {
-  font-size: 20px;
-  line-height: 1.6;
-  max-width: 520px;
-  margin: 18px auto;
-}
-
-.tri-title {
-  margin-top: 10px;
-  letter-spacing: 1px;
-  font-weight: normal;
-  opacity: 0.9;
-}
-
-/* =========================
-   BUTTONS / LINKS
-========================= */
-
 .button {
   display: inline-block;
   margin-top: 25px;
@@ -114,6 +55,15 @@ p {
   color: #000;
 }
 
+.section {
+  margin-top: 70px;
+}
+
+.section h3 {
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
 .about-link {
   color: white;
   text-decoration: none;
@@ -124,9 +74,46 @@ p {
   color: #c6a15b;
 }
 
-/* =========================
-   TOPBAR
-========================= */
+/* LANGUAGE SWITCH */
+
+#lang-switch {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 50;
+}
+
+#lang-switch a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+#lang-switch a:hover {
+  opacity: 1;
+}
+
+#lang-switch .sep {
+  opacity: 0.5;
+}
+
+#lang-switch .flag {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* TOPBAR */
 
 .topbar {
   position: fixed;
@@ -141,7 +128,7 @@ p {
   padding: 14px 18px;
   z-index: 60;
 
-  background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.88), rgba(0,0,0,0));
   backdrop-filter: blur(2px);
 }
 
@@ -192,11 +179,50 @@ p {
   height: 12px;
   border-radius: 2px;
   object-fit: cover;
+  display: inline-block;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* IMAGES */
+
+.hero-img {
+  width: 240px;
+  max-width: 80%;
+  border-radius: 8px;
+  margin: 20px auto 10px;
+  opacity: 0.95;
+  display: block;
+}
+
+.portrait-wrap {
+  margin-top: 10px;
+}
+
+.portrait {
+  width: 140px;
+  max-width: 60%;
+  border-radius: 50%;
+  margin: 18px auto 0;
+  opacity: 0.95;
+  display: block;
+}
+
+/* TEXT */
+
+.tagline {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 18px auto;
+}
+
+.tri-title {
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* FOOTER */
 
 footer {
   margin-top: 70px;
@@ -213,9 +239,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   BACK BUTTON
-========================= */
+/* BACK BUTTON */
 
 .back-button {
   display: inline-block;
@@ -234,9 +258,7 @@ footer a:hover {
   color: #000;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
