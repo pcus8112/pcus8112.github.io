@@ -4,98 +4,298 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Renschler Éditions — Édition indépendante</title>
-  <meta name="description" content="Renschler Éditions est une maison d’édition indépendante dédiée à la littérature, aux essais et à la pensée contemporaine.">
-  <meta name="robots" content="index,follow">
+  <title>Renschler Editions — Livres, savoir et structures claires</title>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
   <link rel="apple-touch-icon" href="/favicon-512.png">
-  
-  <!-- Canonical + hreflang -->
+
+  <meta name="description" content="Renschler Editions est une maison d’édition indépendante axée sur l’éducation et les langues, l’histoire et la philosophie. Les livres allemands sont publiés via BoD. Les livres anglais et français sont disponibles sur Amazon Kindle.">
+  <meta name="robots" content="index,follow">
+
   <link rel="canonical" href="https://renschler-editions.com/fr/">
   <link rel="alternate" hreflang="en" href="https://renschler-editions.com/">
   <link rel="alternate" hreflang="de" href="https://renschler-editions.com/de/">
   <link rel="alternate" hreflang="fr" href="https://renschler-editions.com/fr/">
   <link rel="alternate" hreflang="x-default" href="https://renschler-editions.com/">
 
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-512.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-512.png">
-
-  <!-- Social Preview (Open Graph) -->
-  <meta property="og:title" content="Renschler Éditions">
-  <meta property="og:description" content="Édition indépendante de littérature, essais et pensée contemporaine.">
+  <meta property="og:title" content="Renschler Editions">
+  <meta property="og:description" content="Livres, savoir et structures claires.">
   <meta property="og:image" content="https://renschler-editions.com/assets/social-preview.jpg">
   <meta property="og:url" content="https://renschler-editions.com/fr/">
   <meta property="og:type" content="website">
 
-  <!-- Social Preview (Twitter / X) -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Renschler Éditions">
-  <meta name="twitter:description" content="Édition indépendante de littérature, essais et pensée contemporaine.">
-  <meta name="twitter:image" content="https://renschler-editions.com/assets/social-preview.jpg">
+  <style>
+    :root {
+      --bg: #f6f5f2;
+      --surface: #ffffff;
+      --surface-soft: #fbf3f5;
+      --surface-blue: #eef6ff;
+      --text: #2e2a2a;
+      --muted: #6e6466;
+      --accent: #8f6f7d;
+      --accent-dark: #6f5360;
+      --border: #e8e0e2;
+      --shadow: 0 10px 30px rgba(40, 30, 35, 0.06);
+      --max: 1180px;
+    }
 
-  <link rel="stylesheet" href="/assets/style.css">
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px 50px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .lang-switch a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text);
+    }
+
+    .flag {
+      width: 20px;
+      height: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      width: 260px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 20px;
+      background: var(--accent-dark);
+      color: white;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .person-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .person-photo {
+      max-width: 250px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+
+    .menu-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 15px;
+    }
+
+    .menu-links a {
+      display: block;
+      margin: 6px 0;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+    }
+
+    .soft { background: #fbf3f5; }
+    .blue { background: #eef6ff; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .mini-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .benefits li {
+      margin: 6px 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
 </head>
 
 <body>
-  <nav id="lang-switch" aria-label="Langue">
-  <a href="/">
-    <img src="/assets/flags/flag-en.png" class="flag" alt="English flag">
-    English
-  </a>
+<div class="page">
 
-  <span class="sep">|</span>
+  <div class="topbar">
+    <nav class="lang-switch">
+      <a href="/"><img src="/assets/flags/flag-en.png" class="flag"> English</a>
+      <a href="/fr/"><img src="/assets/flags/flag-fr.png" class="flag"> Français</a>
+      <a href="/de/"><img src="/assets/flags/flag-de.png" class="flag"> Deutsch</a>
+    </nav>
+  </div>
 
-  <a href="/fr/" aria-current="page">
-    <img src="/assets/flags/flag-fr.png" class="flag" alt="Drapeau français">
-    Français
-  </a>
+  <section class="hero">
 
-  <span class="sep">|</span>
+    <div>
+      <img src="/assets/logo.jpg" class="logo">
 
-  <a href="/de/">
-    <img src="/assets/flags/flag-de.png" class="flag" alt="Deutsche Flagge">
-    Deutsch
-  </a>
-  </nav>
+      <h1>Livres, savoir et structures claires.</h1>
 
-  <main class="container">
-    <!-- Cookie-Info Link (NICHT im <head>) -->
-    <p style="margin: 10px 0 25px;">
-      <a href="/fr/cookies.html">Pas de cookies ? Pourquoi nous sommes différents.</a>
+      <p class="lead">
+        Renschler Editions réunit l’éducation et les langues, l’histoire et la philosophie au sein d’une maison d’édition internationale.
+      </p>
+
+      <p class="intro">
+        Notre travail est conçu avec une attention particulière pour les femmes, tout en restant ouvert à toute personne appréciant une présentation calme, une structure claire et un contenu réfléchi.
+      </p>
+
+      <a href="#books" class="button">Livres</a>
+      <a href="#evde" class="button">Outils EVDE</a>
+      <a href="#materials" class="button">PDF gratuits</a>
+
+    </div>
+
+    <div>
+      <div class="person-card">
+        <img src="/assets/jerry.jpg" class="person-photo">
+        <strong>Gerald Renschler</strong><br>
+        Auteur & éditeur
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-links">
+          <a href="#fields">Domaines</a>
+          <a href="#evde">EVDE</a>
+          <a href="#books">Livres</a>
+          <a href="#materials">Matériel gratuit</a>
+          <a href="/fr/about.html">À propos</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="fields" class="section">
+    <div class="grid-3">
+
+      <div class="mini-card">
+        <h3>Éducation & langues</h3>
+        <p>Mathématiques, sciences et apprentissage des langues expliqués de manière claire.</p>
+      </div>
+
+      <div class="mini-card">
+        <h3>Histoire</h3>
+        <p>Comprendre le passé à travers une analyse structurée et accessible.</p>
+      </div>
+
+      <div class="mini-card">
+        <h3>Philosophie</h3>
+        <p>Réflexions sur les grandes questions dans une forme claire et apaisée.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="evde" class="section box soft">
+    <h2>EVDE – EinfachVerstehenDE</h2>
+
+    <p>
+      EVDE est la ligne d’outils Excel de Renschler Editions, conçue pour expliquer étape par étape.
     </p>
 
-    <img src="/assets/logo.jpg" class="logo" alt="Logo Renschler Editions">
+    <ul class="benefits">
+      <li>Compréhensible étape par étape</li>
+      <li>Téléchargement de remplacement inclus en cas de perte</li>
+      <li>Vous avancez à votre rythme</li>
+    </ul>
 
-    <img src="/assets/lady.jpg" class="hero-img" alt="Renschler Editions Jewelry">
-    
-    <h1>RENSCHLER</h1>
-    <h2>EDITIONS</h2>
+    <p>
+      Remarque : les outils sont actuellement <strong>uniquement disponibles en allemand</strong>.
+    </p>
 
-   <p class="tagline">Édition indépendante de littérature, essais et pensée contemporaine.</p>
+    <a href="#" class="button">Voir sur Etsy</a>
+  </section>
 
-    <a href="#" class="button">Commander chez notre partenaire éditorial</a>
+  <section id="books" class="section box">
+    <h2>Livres et plateformes</h2>
 
-    <section class="section" aria-labelledby="pubs">
-      <h3 id="pubs">Publications</h3>
-      <p>Nos premiers titres paraîtront prochainement.</p>
-    </section>
+    <p><strong>Livres allemands :</strong> BoD</p>
+    <p><strong>Livres anglais et français :</strong> Amazon Kindle</p>
+  </section>
 
-    <section class="section">
-      <h3><a href="/fr/about.html" class="about-link">Qui sommes-nous</a></h3>
-    </section>
+  <section id="materials" class="section box blue">
+    <h2>Matériel gratuit</h2>
+    <p>Des PDF complémentaires seront proposés pour approfondir les sujets EVDE.</p>
+  </section>
 
-    <footer>
-      <a href="/impressum.html">Mentions légales</a> |
-      <a href="/datenschutz.html">Protection des données</a>
-    </footer>
-  </main>
+  <footer>
+    © Renschler Editions —
+    <a href="/fr/about.html">À propos</a> |
+    <a href="/impressum.html">Mentions légales</a> |
+    <a href="/datenschutz.html">Confidentialité</a>
+  </footer>
 
-  <script src="/assets/site.js" defer></script>
+</div>
 </body>
 </html>
