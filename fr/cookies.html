@@ -1,62 +1,449 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>Pas de cookies ? Pourquoi nous sommes différents</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="shortcut icon" href="/favicon.ico">   <!-- Profi-Tipp -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-<link rel="apple-touch-icon" href="/favicon-512.png">
-  <link rel="stylesheet" href="../assets/style.css">
+  <title>Pas de cookies ? Pourquoi nous sommes différents. — Renschler Editions</title>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" href="/favicon-512.png">
+
+  <meta name="description" content="Pourquoi Renschler Editions n’utilise ni bannière de cookies, ni suivi, ni réseaux publicitaires — et pourquoi ce choix est volontaire.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://renschler-editions.com/fr/cookies.html">
+  <link rel="alternate" hreflang="en" href="https://renschler-editions.com/cookies.html">
+  <link rel="alternate" hreflang="de" href="https://renschler-editions.com/de/cookies.html">
+  <link rel="alternate" hreflang="fr" href="https://renschler-editions.com/fr/cookies.html">
+  <link rel="alternate" hreflang="x-default" href="https://renschler-editions.com/cookies.html">
+
+  <meta property="og:title" content="Pas de cookies ? Pourquoi nous sommes différents. — Renschler Editions">
+  <meta property="og:description" content="Un choix conscient pour un site plus calme et plus respectueux de la vie privée, sans suivi ni publicité.">
+  <meta property="og:image" content="https://renschler-editions.com/assets/social-preview.jpg">
+  <meta property="og:url" content="https://renschler-editions.com/fr/cookies.html">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #f6f5f2;
+      --surface: #ffffff;
+      --surface-soft: #fbf3f5;
+      --text: #2e2a2a;
+      --muted: #6e6466;
+      --accent-dark: #6f5360;
+      --border: #e8e0e2;
+      --shadow: 0 10px 30px rgba(40, 30, 35, 0.06);
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px 54px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .topback {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 18px;
+    }
+
+    .lang-switch a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    .lang-switch a[aria-current="page"] {
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    .lang-switch .sep {
+      color: #9a8e91;
+    }
+
+    .flag {
+      width: 20px;
+      height: 14px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      width: 220px;
+      max-width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      font-weight: 600;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 20px;
+      color: #4c4345;
+      max-width: 640px;
+    }
+
+    .person-card,
+    .section-card,
+    .note-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .person-card,
+    .section-card,
+    .note-card {
+      padding: 24px;
+    }
+
+    .person-photo {
+      width: 100%;
+      max-width: 290px;
+      margin: 0 auto 16px;
+      border-radius: 20px;
+    }
+
+    .person-name {
+      margin: 0 0 4px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .person-role {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .section-card.soft {
+      background: var(--surface-soft);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    .section-card p,
+    .note-card p {
+      margin: 0 0 14px;
+      font-size: 18px;
+      color: #564c4e;
+    }
+
+    .section-card p:last-child,
+    .note-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .checks {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .checks li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #faf8f8;
+      border: 1px solid #f0e8ea;
+      color: #544b4d;
+      font-size: 17px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 16px;
+      line-height: 1.2;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 32px rgba(40, 30, 35, 0.09);
+    }
+
+    .button.primary {
+      background: var(--accent-dark);
+      color: #fff;
+      border-color: var(--accent-dark);
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .person-card {
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 14px 42px;
+      }
+
+      .lang-switch {
+        font-size: 16px;
+      }
+
+      .lead,
+      .section-card p,
+      .note-card p,
+      .checks li {
+        font-size: 17px;
+      }
+
+      .person-card,
+      .section-card,
+      .note-card {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .button-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
 
-<nav id="lang-switch" aria-label="Language">
-  <a href="/cookies.html">
-    <img src="/assets/flags/flag-en.png" class="flag" alt="English"> English
-  </a>
-  <span class="sep">|</span>
-  <a href="/fr/cookies.html" aria-current="page">
-    <img src="/assets/flags/flag-fr.png" class="flag" alt="Français"> Français
-  </a>
-  <span class="sep">|</span>
-  <a href="/de/cookies.html">
-    <img src="/assets/flags/flag-de.png" class="flag" alt="Deutsch"> Deutsch
-  </a>
-</nav>
+    <div class="topbar">
+      <a class="topback" href="/fr/">← Retour</a>
 
-<div class="container">
+      <nav class="lang-switch" aria-label="Langue">
+        <a href="/cookies.html">
+          <img src="/assets/flags/flag-en.png" alt="English" class="flag">
+          English
+        </a>
+        <span class="sep">|</span>
+        <a href="/fr/cookies.html" aria-current="page">
+          <img src="/assets/flags/flag-fr.png" alt="Français" class="flag">
+          Français
+        </a>
+        <span class="sep">|</span>
+        <a href="/de/cookies.html">
+          <img src="/assets/flags/flag-de.png" alt="Deutsch" class="flag">
+          Deutsch
+        </a>
+      </nav>
+    </div>
 
-<a href="/fr/" class="back-button">← Retour</a>
+    <section class="hero">
+      <div>
+        <img src="/assets/logo.jpg" alt="Logo de Renschler Editions" class="logo">
 
-<h1>Pas de cookies ? Pourquoi nous sommes différents.</h1>
+        <p class="eyebrow">Vie privée et simplicité</p>
 
-<p>De nombreux sites affichent aujourd’hui des avertissements concernant les cookies.</p>
+        <h1>Pas de cookies ? Pourquoi nous sommes différents.</h1>
 
-<p>Cela s’explique par le fait qu’ils collectent des données visiteurs — pour la publicité, le suivi ou l’analyse d’utilisation.</p>
+        <p class="lead">
+          Aujourd’hui, beaucoup de sites demandent une autorisation avant même que l’on puisse lire. Nous avons choisi une voie plus calme et plus simple.
+        </p>
+      </div>
 
-<p>Nous avons choisi d’y renoncer.</p>
+      <div class="person-card">
+        <img src="/assets/jerry.jpg" alt="Gerald Renschler" class="person-photo">
+        <h2 class="person-name">Gerald Renschler</h2>
+        <p class="person-role">Auteur & éditeur</p>
+      </div>
+    </section>
 
-<p>Ce site :</p>
+    <section class="section">
+      <div class="section-card soft">
+        <h2>Un choix conscient</h2>
 
-<p>
-– n’utilise aucun suivi<br>
-– ne stocke aucune donnée personnelle<br>
-– n’utilise aucun réseau publicitaire<br>
-– n’analyse aucun comportement utilisateur
-</p>
+        <p>
+          De nombreux sites affichent aujourd’hui des bannières de cookies parce qu’ils utilisent du suivi, des réseaux publicitaires ou des outils d’analyse qui collectent des données sur les visiteurs.
+        </p>
 
-<p>Il fonctionne sans surveillance.</p>
+        <p>
+          Renschler Editions choisit délibérément une autre voie.
+        </p>
 
-<p>Nous pensons que la vie privée n’est pas un luxe, mais quelque chose de naturel.</p>
+        <p>
+          Nous voulons que ce site paraisse lisible, calme et respectueux dès le premier instant. Cela implique aussi une vraie retenue dans l’usage de la technologie.
+        </p>
+      </div>
+    </section>
 
-<p>C’est pourquoi vous ne voyez ici aucune bannière de cookies.</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>Ce que cela signifie concrètement</h2>
 
-<p>Bienvenue sur un site que vous pouvez simplement lire.</p>
+        <ul class="checks">
+          <li>Aucun réseau publicitaire</li>
+          <li>Aucun suivi du comportement des visiteurs</li>
+          <li>Aucun outil d’analyse à des fins marketing</li>
+          <li>Aucune collecte de données inutile pour lire ce site</li>
+        </ul>
 
-</div>
+        <p>
+          En bref : ce site est conçu pour fonctionner sans surveillance.
+        </p>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="note-card">
+        <h2>Pourquoi cela compte</h2>
+
+        <p>
+          La vie privée ne devrait pas ressembler à un luxe. Elle devrait sembler normale.
+        </p>
+
+        <p>
+          Une maison d’édition qui présente des livres, des idées et des supports éducatifs n’a pas besoin de transformer chaque visiteur en point de données.
+        </p>
+
+        <p>
+          C’est pourquoi vous ne voyez pas de bannière de cookies ici.
+        </p>
+
+        <div class="button-row">
+          <a href="/fr/" class="button primary">Retour à l’accueil</a>
+          <a href="/fr/about.html" class="button">À propos de Renschler Editions</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Renschler Editions</div>
+      <div class="footer-links">
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/about.html">À propos</a>
+        <a href="/impressum.html">Mentions légales</a>
+        <a href="/datenschutz.html">Confidentialité</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
