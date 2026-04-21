@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>À propos — Renschler Éditions</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="shortcut icon" href="/favicon.ico">   <!-- Profi-Tipp -->
+  <title>À propos — Renschler Editions</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-<link rel="apple-touch-icon" href="/favicon-512.png">
-  <meta name="description" content="Renschler Éditions — collections : Histoire, Esprit, Imaginaires, Éducation, Langues.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" href="/favicon-512.png">
+
+  <meta name="description" content="En savoir plus sur Renschler Editions, son orientation éditoriale et Gerald Renschler en tant qu’auteur et éditeur.">
   <meta name="robots" content="index,follow">
 
   <link rel="canonical" href="https://renschler-editions.com/fr/about.html">
@@ -20,74 +21,522 @@
   <link rel="alternate" hreflang="fr" href="https://renschler-editions.com/fr/about.html">
   <link rel="alternate" hreflang="x-default" href="https://renschler-editions.com/about.html">
 
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta property="og:title" content="À propos — Renschler Editions">
+  <meta property="og:description" content="En savoir plus sur Renschler Editions et Gerald Renschler.">
+  <meta property="og:image" content="https://renschler-editions.com/assets/social-preview.jpg">
+  <meta property="og:url" content="https://renschler-editions.com/fr/about.html">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #f6f5f2;
+      --surface: #ffffff;
+      --surface-soft: #fbf3f5;
+      --text: #2e2a2a;
+      --muted: #6e6466;
+      --accent-dark: #6f5360;
+      --border: #e8e0e2;
+      --shadow: 0 10px 30px rgba(40, 30, 35, 0.06);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.68;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px 54px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .topback {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 18px;
+    }
+
+    .lang-switch a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    .lang-switch a[aria-current="page"] {
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    .lang-switch .sep {
+      color: #9a8e91;
+    }
+
+    .flag {
+      width: 20px;
+      height: 14px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .logo {
+      width: 240px;
+      max-width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.08;
+      font-weight: 600;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      font-size: 20px;
+      color: #4c4345;
+    }
+
+    .person-card,
+    .menu-card,
+    .section-card,
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .person-card,
+    .menu-card,
+    .section-card {
+      padding: 24px;
+    }
+
+    .person-card {
+      text-align: left;
+    }
+
+    .person-photo {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 16px;
+      border-radius: 20px;
+    }
+
+    .person-name {
+      margin: 0 0 4px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .person-role {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .menu-title {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .menu-links a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #faf8f8;
+      color: var(--text);
+      border: 1px solid #f0e8ea;
+    }
+
+    .menu-links a:hover {
+      text-decoration: none;
+      background: #f6f0f2;
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section-card.soft {
+      background: var(--surface-soft);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .section-card p,
+    .mini-card p {
+      margin: 0 0 14px;
+      font-size: 18px;
+      color: #564c4e;
+    }
+
+    .section-card p:last-child,
+    .mini-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .mini-card {
+      padding: 24px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 16px;
+      line-height: 1.2;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 32px rgba(40, 30, 35, 0.09);
+    }
+
+    .button.primary {
+      background: var(--accent-dark);
+      color: #fff;
+      border-color: var(--accent-dark);
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right {
+        max-width: 520px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 14px 42px;
+      }
+
+      .lang-switch {
+        font-size: 16px;
+      }
+
+      .lead,
+      .section-card p,
+      .mini-card p {
+        font-size: 17px;
+      }
+
+      .person-card,
+      .menu-card,
+      .section-card,
+      .mini-card {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .button-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page">
 
-<div class="topbar">
-  <a class="topback" href="/fr/">← Back / Retour / Zurück</a>
+    <div class="topbar">
+      <a class="topback" href="/fr/">← Retour</a>
 
-  <nav class="toplang" aria-label="Language">
-    <a href="/about.html">
-      <img src="/assets/flags/flag-en.png" alt="English" class="flag" width="18" height="12"> English
-    </a>
-    <span class="sep">|</span>
-    <a href="/fr/about.html" aria-current="page">
-      <img src="/assets/flags/flag-fr.png" alt="Français" class="flag" width="18" height="12"> Français
-    </a>
-    <span class="sep">|</span>
-    <a href="/de/about.html">
-      <img src="/assets/flags/flag-de.png" alt="Deutsch" class="flag" width="18" height="12"> Deutsch
-    </a>
-  </nav>
-</div>
+      <nav class="lang-switch" aria-label="Langue">
+        <a href="/about.html">
+          <img src="/assets/flags/flag-en.png" alt="English" class="flag">
+          English
+        </a>
+        <span class="sep">|</span>
+        <a href="/fr/about.html" aria-current="page">
+          <img src="/assets/flags/flag-fr.png" alt="Français" class="flag">
+          Français
+        </a>
+        <span class="sep">|</span>
+        <a href="/de/about.html">
+          <img src="/assets/flags/flag-de.png" alt="Deutsch" class="flag">
+          Deutsch
+        </a>
+      </nav>
+    </div>
 
-<main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <img src="/assets/logo.jpg" alt="Logo de Renschler Editions" class="logo">
 
-  <img src="/assets/logo.jpg" class="logo" alt="Logo Renschler Editions">
+        <p class="eyebrow">À propos de Renschler Editions</p>
 
-  <div class="portrait-wrap">
-    <img src="/assets/pierre.jpg" class="portrait" alt="Pierre Singer" loading="lazy">
+        <h1>Une maison d’édition pour les livres, la clarté et le travail réfléchi.</h1>
+
+        <p class="lead">
+          Renschler Editions repose sur l’idée que le savoir ne doit pas être caché derrière le bruit. Il doit être structuré, lisible et discrètement fort.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="person-card">
+          <img src="/assets/jerry.jpg" alt="Gerald Renschler" class="person-photo">
+          <h2 class="person-name">Gerald Renschler</h2>
+          <p class="person-role">Auteur & éditeur</p>
+        </div>
+
+        <div class="menu-card">
+          <p class="menu-title">Menu</p>
+          <div class="menu-links">
+            <a href="#approche">Notre approche</a>
+            <a href="#domaines">Domaines éditoriaux</a>
+            <a href="#gerald">Gerald Renschler</a>
+            <a href="/cookies.html">Pourquoi pas de cookies ?</a>
+            <a href="/fr/">Accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approche" class="section">
+      <div class="section-card soft">
+        <h2>Notre approche</h2>
+
+        <p>
+          Renschler Editions réunit des livres et des outils éducatifs pratiques sous un même ensemble cohérent.
+        </p>
+
+        <p>
+          La maison d’édition est internationale. En même temps, elle suit un ordre intérieur clair : les sujets sont présentés avec calme, dans une langue accessible et avec un respect visible pour la lectrice et le lecteur.
+        </p>
+
+        <p>
+          Notre travail est conçu avec une sensibilité particulière pour les femmes, tout en restant ouvert à toute personne qui apprécie la clarté, la substance et un ton plus réfléchi.
+        </p>
+
+        <div class="button-row">
+          <a href="/fr/" class="button primary">Retour à l’accueil</a>
+          <a href="/cookies.html" class="button">Pourquoi sommes-nous différents ?</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="domaines" class="section">
+      <div class="grid-3">
+        <div class="mini-card">
+          <h3>Éducation & langues</h3>
+          <p>
+            Ce domaine comprend les mathématiques, la physique, la chimie, l’apprentissage des langues ainsi que des supports éducatifs soigneusement structurés.
+          </p>
+          <p>
+            Il comprend aussi EVDE, la ligne d’outils Excel de la maison d’édition.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Histoire</h3>
+          <p>
+            Les livres et essais historiques sont développés avec un souci d’ordre, d’analyse et d’accessibilité.
+          </p>
+          <p>
+            Le but n’est pas le bruit, mais la compréhension.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Philosophie</h3>
+          <p>
+            Le travail philosophique chez Renschler Editions se veut lisible, clair et sérieux, sans devenir froid ou vide.
+          </p>
+          <p>
+            La substance compte davantage que la mise en scène.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gerald" class="section">
+      <div class="section-card">
+        <h2>Gerald Renschler</h2>
+
+        <p>
+          Gerald Renschler est l’auteur et l’éditeur à l’origine de Renschler Editions.
+        </p>
+
+        <p>
+          Son travail relie les livres, les idées éducatives et les outils structurés. L’objectif n’est pas seulement de publier du contenu, mais de construire un ensemble cohérent dans lequel les livres, les langues, la pensée et les supports d’apprentissage pratiques se renforcent mutuellement.
+        </p>
+
+        <p>
+          C’est pourquoi Renschler Editions ne se limite pas à un seul type de publication. Le projet comprend des livres, des supports téléchargeables et EVDE comme ligne spécialisée d’outils Excel guidés.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-card">
+        <h2>Canaux de publication</h2>
+
+        <p>
+          La structure de publication est volontairement claire selon la langue :
+        </p>
+
+        <p>
+          <strong>Les livres allemands</strong> sont publiés via <strong>BoD</strong>.
+        </p>
+
+        <p>
+          <strong>Les livres anglais et français</strong> sont publiés via <strong>Amazon Kindle</strong>.
+        </p>
+
+        <p>
+          Les outils EVDE sont liés depuis toutes les versions linguistiques du site, avec une indication claire qu’ils sont actuellement disponibles en allemand uniquement.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Renschler Editions</div>
+      <div class="footer-links">
+        <a href="/fr/">Accueil</a>
+        <a href="/impressum.html">Mentions légales</a>
+        <a href="/datenschutz.html">Confidentialité</a>
+      </div>
+    </footer>
+
   </div>
-
-  <h1>RENSCHLER</h1>
-  <h2>EDITIONS</h2>
-
-  <h3 class="tri-title">À propos</h3>
-
-  <section class="section">
-  <p>
-    Renschler Éditions est une position.
-  </p>
-  <p>
-    Nous croyons à l’union de l’esthétique et du savoir.
-    À la forme et à la substance.
-    À la discipline plutôt qu’au bruit.
-  </p>
-  <p>
-    La beauté n’est pas pour nous une décoration.
-    Elle est l’expression de l’ordre.
-  </p>
-  <p>
-    Nos livres sont la forme concrète de cette conviction.
-  </p>
-</section>
-
-  <section class="section">
-    <h3>Collections</h3>
-    <p><strong>Histoire</strong> — histoire & réflexion</p>
-    <p><strong>Esprit</strong> — pensée religieuse & philosophique</p>
-    <p><strong>Imaginaires</strong> — œuvres créatives & art-house</p>
-    <p><strong>Éducation</strong> — apprentissage & manuels</p>
-    <p><strong>Langues</strong> — langues & culture</p>
-  </section>
-
-  <footer>
-    <a href="/impressum.html">Mentions légales</a> |
-    <a href="/datenschutz.html">Protection des données</a>
-  </footer>
-
-</main>
 </body>
-</html>
+  </html>
