@@ -1,62 +1,250 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<title>Keine Cookies? Warum wir anders sind</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="shortcut icon" href="/favicon.ico">   <!-- Profi-Tipp -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-<link rel="apple-touch-icon" href="/favicon-512.png">
-  <link rel="stylesheet" href="../assets/style.css">
+  <title>Keine Cookies? Warum wir anders sind. — Renschler Editions</title>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" href="/favicon-512.png">
+
+  <meta name="description" content="Warum Renschler Editions keine Cookie-Banner, kein Tracking und keine Werbenetzwerke nutzt — und weshalb das eine bewusste Entscheidung ist.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://renschler-editions.com/de/cookies.html">
+  <link rel="alternate" hreflang="en" href="https://renschler-editions.com/cookies.html">
+  <link rel="alternate" hreflang="de" href="https://renschler-editions.com/de/cookies.html">
+  <link rel="alternate" hreflang="fr" href="https://renschler-editions.com/fr/cookies.html">
+  <link rel="alternate" hreflang="x-default" href="https://renschler-editions.com/cookies.html">
+
+  <meta property="og:title" content="Keine Cookies? Warum wir anders sind. — Renschler Editions">
+  <meta property="og:description" content="Eine bewusste Entscheidung für eine ruhigere und privatere Website ohne Tracking oder Werbung.">
+  <meta property="og:image" content="https://renschler-editions.com/assets/social-preview.jpg">
+  <meta property="og:url" content="https://renschler-editions.com/de/cookies.html">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #f6f5f2;
+      --surface: #ffffff;
+      --surface-soft: #fbf3f5;
+      --text: #2e2a2a;
+      --muted: #6e6466;
+      --accent-dark: #6f5360;
+      --border: #e8e0e2;
+      --shadow: 0 10px 30px rgba(40, 30, 35, 0.06);
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px 54px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .topback {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .lang-switch a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text);
+    }
+
+    .flag {
+      width: 20px;
+      height: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 20px;
+    }
+
+    .person-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .person-photo {
+      max-width: 250px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+    }
+
+    .soft { background: #fbf3f5; }
+
+    .checks li {
+      margin: 6px 0;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      background: var(--accent-dark);
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
 </head>
+
 <body>
+<div class="page">
 
-<nav id="lang-switch" aria-label="Language">
-  <a href="/cookies.html">
-    <img src="/assets/flags/flag-en.png" class="flag" alt="English"> English
-  </a>
-  <span class="sep">|</span>
-  <a href="/fr/cookies.html">
-    <img src="/assets/flags/flag-fr.png" class="flag" alt="Français"> Français
-  </a>
-  <span class="sep">|</span>
-  <a href="/de/cookies.html" aria-current="page">
-    <img src="/assets/flags/flag-de.png" class="flag" alt="Deutsch"> Deutsch
-  </a>
-</nav>
+  <div class="topbar">
+    <a class="topback" href="/de/">← Zurück</a>
 
-<div class="container">
+    <nav class="lang-switch">
+      <a href="/cookies.html"><img src="/assets/flags/flag-en.png" class="flag"> English</a>
+      <a href="/fr/cookies.html"><img src="/assets/flags/flag-fr.png" class="flag"> Français</a>
+      <a href="/de/cookies.html"><img src="/assets/flags/flag-de.png" class="flag"> Deutsch</a>
+    </nav>
+  </div>
 
-<a href="/de/" class="back-button">← Zurück</a>
+  <section class="hero">
 
-<h1>Keine Cookies? Warum wir anders sind.</h1>
+    <div>
+      <img src="/assets/logo.jpg" class="logo">
 
-<p>Viele Websites zeigen heute Cookie-Hinweise.</p>
+      <h1>Keine Cookies? Warum wir anders sind.</h1>
 
-<p>Das liegt daran, dass sie Besucherdaten sammeln — etwa für Werbung, Tracking oder Nutzungsanalysen.</p>
+      <p class="lead">
+        Viele Websites verlangen heute zuerst eine Zustimmung, bevor man überhaupt lesen kann. Wir haben uns bewusst für einen ruhigeren Weg entschieden.
+      </p>
+    </div>
 
-<p>Wir verzichten bewusst darauf.</p>
+    <div class="person-card">
+      <img src="/assets/jerry.jpg" class="person-photo">
+      <strong>Gerald Renschler</strong><br>
+      Autor & Verleger
+    </div>
 
-<p>Diese Website:</p>
+  </section>
 
-<p>
-– verwendet kein Tracking<br>
-– speichert keine persönlichen Daten<br>
-– nutzt keine Werbenetzwerke<br>
-– analysiert kein Nutzerverhalten
-</p>
+  <section class="section box soft">
+    <h2>Eine bewusste Entscheidung</h2>
 
-<p>Sie funktioniert ohne Überwachung.</p>
+    <p>
+      Viele Websites zeigen Cookie-Banner, weil sie Tracking, Werbenetzwerke oder Analyse-Tools einsetzen, die Daten über Besucher sammeln.
+    </p>
 
-<p>Wir glauben, dass Privatsphäre kein Luxus ist, sondern selbstverständlich sein sollte.</p>
+    <p>
+      Renschler Editions geht bewusst einen anderen Weg.
+    </p>
 
-<p>Deshalb sehen Sie hier kein Cookie-Banner.</p>
+    <p>
+      Diese Website soll von Anfang an ruhig, klar und respektvoll wirken. Dazu gehört auch ein bewusster und zurückhaltender Umgang mit Technik.
+    </p>
+  </section>
 
-<p>Willkommen auf einer Website, die Sie einfach lesen dürfen.</p>
+  <section class="section box">
+    <h2>Was das konkret bedeutet</h2>
+
+    <ul class="checks">
+      <li>Keine Werbenetzwerke</li>
+      <li>Kein Tracking des Nutzerverhaltens</li>
+      <li>Keine Marketing-Analyse-Tools</li>
+      <li>Keine unnötige Datensammlung beim Lesen dieser Website</li>
+    </ul>
+
+    <p>
+      Kurz gesagt: Diese Website funktioniert ohne Überwachung.
+    </p>
+  </section>
+
+  <section class="section box">
+    <h2>Warum das wichtig ist</h2>
+
+    <p>
+      Privatsphäre sollte kein Luxus sein, sondern selbstverständlich.
+    </p>
+
+    <p>
+      Ein Verlag, der Bücher, Gedanken und Lernmaterialien präsentiert, muss seine Besucher nicht zu Datenpunkten machen.
+    </p>
+
+    <p>
+      Deshalb gibt es hier kein Cookie-Banner.
+    </p>
+
+    <a href="/de/" class="button">Zurück zur Startseite</a>
+  </section>
+
+  <footer>
+    © Renschler Editions —
+    <a href="/de/">Startseite</a> |
+    <a href="/de/about.html">Über uns</a> |
+    <a href="/impressum.html">Impressum</a> |
+    <a href="/datenschutz.html">Datenschutz</a>
+  </footer>
 
 </div>
-
 </body>
 </html>
