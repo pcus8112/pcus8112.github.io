@@ -1,100 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Datenschutz</title>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="shortcut icon" href="/favicon.ico">   <!-- Profi-Tipp -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-<link rel="apple-touch-icon" href="/favicon-512.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{
-  background:#000;
-  color:#eaeaea;
-  font-family: Georgia, serif;
-  max-width: 720px;
-  margin: 60px auto;
-  padding: 20px;
-  line-height: 1.7;
-}
-h1,h2{
-  color:white;
-}
-a{
-  color:#c9a646;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Datenschutz — Renschler Editions</title>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" href="/favicon-512.png">
+
+  <meta name="description" content="Datenschutzerklärung von Renschler Editions. Informationen zur Verarbeitung personenbezogener Daten, Hosting, Kontaktaufnahme und zu Ihren Rechten.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://renschler-editions.com/datenschutz.html">
+
+  <meta property="og:title" content="Datenschutz — Renschler Editions">
+  <meta property="og:description" content="Informationen zur Verarbeitung personenbezogener Daten auf renschler-editions.com">
+  <meta property="og:image" content="https://renschler-editions.com/assets/social-preview.jpg">
+  <meta property="og:url" content="https://renschler-editions.com/datenschutz.html">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #f6f5f2;
+      --surface: #ffffff;
+      --surface-soft: #fbf3f5;
+      --text: #2e2a2a;
+      --muted: #6e6466;
+      --accent-dark: #6f5360;
+      --border: #e8e0e2;
+      --shadow: 0 10px 30px rgba(40, 30, 35, 0.06);
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px 54px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .topback {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .hero,
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero,
+    .section-card {
+      padding: 24px;
+    }
+
+    .hero {
+      margin-bottom: 24px;
+      background: var(--surface-soft);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #564c4e;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 10px 0 0 22px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 16px;
+      line-height: 1.2;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 32px rgba(40, 30, 35, 0.09);
+    }
+
+    .button.primary {
+      background: var(--accent-dark);
+      color: #fff;
+      border-color: var(--accent-dark);
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 14px 42px;
+      }
+
+      p, li {
+        font-size: 17px;
+      }
+
+      .hero,
+      .section-card {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .button-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
 
-<h1>Datenschutzerklärung</h1>
+    <div class="topbar">
+      <a class="topback" href="/">← Zurück zur Startseite</a>
+    </div>
 
-<h2>1. Verantwortlicher</h2>
-<p>
-Verantwortlich für die Datenverarbeitung auf dieser Website ist:
-</p>
+    <section class="hero">
+      <p class="eyebrow">Datenschutz</p>
+      <h1>Datenschutzerklärung</h1>
+      <p>
+        Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Nachfolgend informieren wir Sie darüber, welche Daten beim Besuch dieser Website verarbeitet werden, zu welchen Zwecken dies geschieht und welche Rechte Sie dabei haben.
+      </p>
+    </section>
 
-<p>
-Renschler Editions<br>
-Gerald Renschler<br>
-87 Impasse de la Petite Trémaillère<br>
-71500 Saint-Usuge<br>
-France<br><br>
-E-Mail: legal@renschler-editions.com
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+        </p>
+        <p>
+          Renschler Editions<br>
+          Gerald Renschler<br>
+          87 Impasse de la Petite Trémaillère<br>
+          71500 Saint-Usuge<br>
+          France
+        </p>
+        <p>
+          E-Mail: legal@renschler-editions.com
+        </p>
+      </div>
+    </section>
 
-<h2>2. Zugriffsdaten (Server-Logfiles)</h2>
-<p>
-Der Hosting-Anbieter dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt. Dies sind:
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>2. Hosting</h2>
+        <p>
+          Diese Website wird als statische Website gehostet. Im Rahmen des Hostings können durch den Hosting-Anbieter technisch erforderliche Daten verarbeitet werden, etwa zur Auslieferung der Website, zur Stabilität und zur Sicherheit des Betriebs.
+        </p>
+        <p>
+          Dazu können insbesondere Server-Logdaten gehören, zum Beispiel:
+        </p>
+        <ul>
+          <li>IP-Adresse</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>aufgerufene Datei bzw. Seite</li>
+          <li>Browsertyp und Browserversion</li>
+          <li>verwendetes Betriebssystem</li>
+          <li>Referrer-URL, sofern übermittelt</li>
+        </ul>
+        <p>
+          Die Verarbeitung dieser Daten erfolgt, um die Website technisch bereitzustellen sowie die Stabilität und Sicherheit des Angebots zu gewährleisten.
+        </p>
+      </div>
+    </section>
 
-<ul>
-<li>Browsertyp und Browserversion</li>
-<li>verwendetes Betriebssystem</li>
-<li>Referrer URL</li>
-<li>Hostname des zugreifenden Rechners</li>
-<li>Uhrzeit der Serveranfrage</li>
-<li>IP-Adresse</li>
-</ul>
+    <section class="section">
+      <div class="section-card">
+        <h2>3. Keine Cookies, kein Tracking, keine Werbenetzwerke</h2>
+        <p>
+          Diese Website verwendet keine Cookie-Banner für Marketing- oder Trackingzwecke, keine Werbenetzwerke und keine Analyse-Tools zur Auswertung des Nutzerverhaltens.
+        </p>
+        <p>
+          Es erfolgt insbesondere kein personalisiertes Marketing und keine Profilbildung zu Werbezwecken.
+        </p>
+      </div>
+    </section>
 
-<p>
-Diese Daten sind nicht bestimmten Personen zuordenbar und dienen ausschließlich der Sicherstellung eines störungsfreien Betriebs der Website.
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>4. Kontaktaufnahme per E-Mail</h2>
+        <p>
+          Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Angaben, um Ihre Anfrage zu bearbeiten und gegebenenfalls Anschlussfragen zu beantworten.
+        </p>
+        <p>
+          Dies betrifft insbesondere:
+        </p>
+        <ul>
+          <li>Ihren Namen, soweit angegeben</li>
+          <li>Ihre E-Mail-Adresse</li>
+          <li>den Inhalt Ihrer Nachricht</li>
+        </ul>
+        <p>
+          Die Verarbeitung erfolgt ausschließlich zum Zweck der Kommunikation mit Ihnen.
+        </p>
+      </div>
+    </section>
 
-<h2>3. Kontaktaufnahme per E-Mail</h2>
-<p>
-Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage sowie für den Fall von Anschlussfragen gespeichert.
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>5. Zweck und Rechtsgrundlagen der Verarbeitung</h2>
+        <p>
+          Personenbezogene Daten werden auf dieser Website nur verarbeitet, soweit dies erforderlich ist.
+        </p>
+        <p>
+          Die Verarbeitung kann insbesondere auf folgenden Grundlagen beruhen:
+        </p>
+        <ul>
+          <li>zur technischen Bereitstellung und sicheren Auslieferung der Website</li>
+          <li>zur Bearbeitung von Anfragen, die Sie uns per E-Mail senden</li>
+          <li>zur Wahrung berechtigter Interessen an Sicherheit, Stabilität und Funktionsfähigkeit der Website</li>
+        </ul>
+      </div>
+    </section>
 
-<h2>4. Externe Links</h2>
-<p>
-Diese Website kann Links zu externen Websites enthalten. Für deren Inhalte übernehmen wir keine Haftung. Für die Inhalte der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>6. Speicherdauer</h2>
+        <p>
+          Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+        </p>
+        <p>
+          E-Mails und darin enthaltene Angaben werden grundsätzlich nur so lange aufbewahrt, wie dies zur Bearbeitung der Anfrage oder zur Erfüllung rechtlicher Pflichten erforderlich ist.
+        </p>
+      </div>
+    </section>
 
-<h2>5. Ihre Rechte</h2>
-<p>
-Sie haben jederzeit das Recht auf Auskunft über die bei uns gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung. Sie haben außerdem ein Recht auf Berichtigung oder Löschung dieser Daten.
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>7. Empfänger von Daten</h2>
+        <p>
+          Eine Weitergabe personenbezogener Daten erfolgt nur, soweit dies erforderlich ist.
+        </p>
+        <p>
+          Empfänger können insbesondere technische Dienstleister sein, die für das Hosting oder den E-Mail-Betrieb eingesetzt werden, soweit dies zur Bereitstellung des Angebots notwendig ist.
+        </p>
+      </div>
+    </section>
 
-<h2>6. Hosting</h2>
-<p>
-Diese Website wird bei einem externen Dienstleister gehostet. Personenbezogene Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Dies kann insbesondere IP-Adressen und technische Daten umfassen.
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>8. Ihre Rechte</h2>
+        <p>
+          Sie haben im Rahmen der geltenden datenschutzrechtlichen Vorschriften insbesondere folgende Rechte:
+        </p>
+        <ul>
+          <li>Recht auf Information über die Verarbeitung Ihrer Daten</li>
+          <li>Recht auf Auskunft</li>
+          <li>Recht auf Berichtigung unrichtiger Daten</li>
+          <li>Recht auf Löschung</li>
+          <li>Recht auf Einschränkung der Verarbeitung</li>
+          <li>Recht auf Datenübertragbarkeit</li>
+          <li>Recht auf Widerspruch gegen bestimmte Verarbeitungen</li>
+        </ul>
+        <p>
+          Wenn Sie eines dieser Rechte ausüben möchten, können Sie uns unter der oben genannten E-Mail-Adresse kontaktieren.
+        </p>
+      </div>
+    </section>
 
-<p>
-Der Einsatz des Hosters erfolgt zum Zwecke des sicheren, schnellen und effizienten Bereitstellens unseres Online-Angebots.
-</p>
+    <section class="section">
+      <div class="section-card">
+        <h2>9. Beschwerderecht</h2>
+        <p>
+          Sie haben zudem das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten nicht rechtmäßig erfolgt.
+        </p>
+      </div>
+    </section>
 
-<br><br>
+    <section class="section">
+      <div class="section-card">
+        <h2>10. Externe Links</h2>
+        <p>
+          Diese Website kann Links zu externen Plattformen oder Websites enthalten, etwa zu Etsy, BoD oder Amazon. Für die Inhalte und die Datenverarbeitung auf diesen externen Seiten sind ausschließlich deren jeweilige Betreiber verantwortlich.
+        </p>
+      </div>
+    </section>
 
-<footer style="text-align:center; opacity:0.6;">
-© Renschler Editions / Verlag Renschler
-</footer>
+    <section class="section">
+      <div class="section-card">
+        <h2>11. Stand</h2>
+        <p>
+          Diese Datenschutzerklärung hat den Stand: April 2026.
+        </p>
 
+        <div class="button-row">
+          <a href="/" class="button primary">Zur Startseite</a>
+          <a href="/impressum.html" class="button">Zum Impressum</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Renschler Editions</div>
+      <div class="footer-links">
+        <a href="/">Startseite</a>
+        <a href="/about.html">About</a>
+        <a href="/impressum.html">Impressum</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
-  <a href="index.html" style="text-decoration:none; opacity:0.8;">
-← Back / Retour / Zurück
-</a>
 </html>
